@@ -36,7 +36,7 @@ HTML:
     <button class="button" data-row="2" data-col="2"></button>
     You can use data-somename="..." to make the element unique
 JS:
-const buttons=document.querySelector('.button');
+const buttons=document.querySelectorAll('.button');  //Don't forget about the 'All'!
 buttons.forEach((btn)=>{
     btn.addEventListener('click',(e)=>{
         console.log(e.target.dataset.row); //eg:0
@@ -45,3 +45,5 @@ buttons.forEach((btn)=>{
 });
 
 You can use 'e.target' && 'dataset.somename' to get which button you are clicking.
+
+4.In the 'restart' part, though we can't access the hidden variables in the closures, we can create new functions in these closures to fetch the unaccessible vars and reset them. Then,we return these functions.

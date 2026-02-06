@@ -5,23 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Link to the file that Tailwind will CREATE in the next step -->
   <link href="./output.css" rel="stylesheet">
-  <script src="mainCopy.js" defer></script>
+  <script src="mainOptimized.js" defer></script>
 </head> 
 <body>
   <div id="userInfo" class="flex">
-    <button id="player1" class="text-white text-2xl w-full font-bold bg-blue-600 rounded ring-white text-center p-6"></button>
-    <button id="player2" class="text-white text-2xl w-full font-bold bg-red-600 rounded ring-white text-center p-6"></button>
+    <button id="player1" class="text-white btn text-2xl w-full font-bold bg-blue-600 rounded ring-white text-center p-6"></button>
+    <button id="player2" class="text-white btn text-2xl w-full font-bold bg-red-600 rounded ring-white text-center p-6"></button>
   </div>
   <div id="container" class="w-45 h-45 m-auto mt-12 grid grid-cols-3 grid-rows-3 *:border-2 *:rounded *:bg-amber-400">
-    <button id="one" class="button" data-row="0" data-col="0"></button>
-    <button id="two" class="button" data-row="0" data-col="1"></button>
-    <button id="three" class="button" data-row="0" data-col="2"></button>
-    <button id="four" class="button" data-row="1" data-col="0"></button>
-    <button id="five" class="button" data-row="1" data-col="1"></button>
-    <button id="six" class="button" data-row="1" data-col="2"></button>
-    <button id="seven" class="button" data-row="2" data-col="0"></button>
-    <button id="eight" class="button" data-row="2" data-col="1"></button>
-    <button id="nine" class="button" data-row="2" data-col="2"></button>
+    <button id="one" class="button btn" data-row="0" data-col="0"></button>
+    <button id="two" class="button btn" data-row="0" data-col="1"></button>
+    <button id="three" class="button btn" data-row="0" data-col="2"></button>
+    <button id="four" class="button btn" data-row="1" data-col="0"></button>
+    <button id="five" class="button btn" data-row="1" data-col="1"></button>
+    <button id="six" class="button btn" data-row="1" data-col="2"></button>
+    <button id="seven" class="button btn" data-row="2" data-col="0"></button>
+    <button id="eight" class="button btn" data-row="2" data-col="1"></button>
+    <button id="nine" class="button btn" data-row="2" data-col="2"></button>
   </div>
+  <button class="restart">Restart</button>
 </body>
 </html>

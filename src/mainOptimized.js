@@ -14,14 +14,25 @@ const Gameboard=(function(){
         }        
         return arr;
     }
-    return {arrAdd};
+    function arrClear(){
+        for(let i=0;i<=2;i++){
+            for(let j=0;j<=2;j++){
+                arr[i][j]='m';
+            }
+        }
+    }
+    return {arrAdd,arrClear};
 })();
 
 const GameController=(function(){
     let round=1;
     let player;
     let isOver=false;
-    
+    function clearVar(){
+        round=1;
+        player={};
+        isOver=false;
+    }
     
     function inputWhere(row,col){
         if(isOver){
@@ -90,11 +101,11 @@ const GameController=(function(){
         return player.symbol;
     }
     
-    return {inputWhere};
+    return {inputWhere,clearVar};
 })();
 const playerInfo1=document.querySelector('#player1');
 const playerInfo2=document.querySelector('#player2');
-const buttons=document.querySelector('.button');
+const buttons=document.querySelectorAll('.button');
 buttons.forEach((btn)=>{
     btn.addEventListener('click',(e)=>{
         if(!checkFirst()){
@@ -139,3 +150,13 @@ function checkFirst(){
     
     return 1;
 }
+const restart=document.querySelector('.restart');
+const allButton=document.querySelectorAll('.btn');
+restart.addEventListener('click',()=>{
+    player1={};player2={};
+    Gameboard.arrClear();
+    GameController.clearVar();
+    allButton.forEach((btn)=>{
+        btn.textContent='';
+    })
+})
